@@ -1,44 +1,52 @@
 import React from 'react';
 import Hero from './components/Hero';
-import Philosophy from './components/Philosophy';
+import About from './components/About';
 import Music from './components/Music';
-import GeminiOracle from './components/GeminiOracle';
+import AISection from './components/AISection';
 import Visuals from './components/Visuals';
 import Collaborations from './components/Collaborations';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <main className="w-full min-h-screen bg-black text-zinc-200">
+    <main className="w-full min-h-screen bg-black text-zinc-200 relative">
+      {/* Cinematic Noise Overlay */}
+      <div className="bg-noise" />
+
       {/* 
-        Structure:
-        1. Hero (Immersive Entry)
-        2. Philosophy (Conscious State)
-        3. Music (Late-night/Sensual State)
-        4. Gemini Oracle (Futuristic/Experimental State)
-        5. Visuals & Collab (Closing)
+        Vertical Soundspace Structure
       */}
       
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
       
-      {/* Add a subtle breath/spacer */}
+      {/* Breath spacer */}
       <div className="h-24 w-full bg-gradient-to-b from-black to-transparent" />
       
-      <Philosophy />
+      <div id="about">
+        <About />
+      </div>
       
-      <Music />
+      <div id="music">
+        <Music />
+      </div>
       
-      {/* 
-        The Oracle section acts as a bridge to the futuristic state.
-        We ensure it feels distinct but connected.
-      */}
-      <GeminiOracle />
+      <div id="ai-section">
+        <AISection />
+      </div>
       
-      <Visuals />
+      <div id="visuals">
+        <Visuals />
+      </div>
       
-      <Collaborations />
+      <div id="collaborations">
+        <Collaborations />
+      </div>
       
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
     </main>
   );
 }
